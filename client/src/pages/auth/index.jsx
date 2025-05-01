@@ -37,13 +37,17 @@ function AuthPage() {
   }
 
   function checkIfSignUpFormIsValid() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
     return (
       signUpFormData &&
       signUpFormData.userName !== "" &&
       signUpFormData.userEmail !== "" &&
+      emailRegex.test(signUpFormData.userEmail) &&  // email format check
       signUpFormData.password !== ""
     );
   }
+  
 
   console.log(signInFormData);
 

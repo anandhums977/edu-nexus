@@ -13,11 +13,10 @@ const studentCourseProgressRoutes = require("./routes/student-routes/course-prog
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = 'mongodb+srv://anandhu:appleorange@cluster0.fuapshf.mongodb.net/lms?retryWrites=true&w=majority&appName=Cluster0';
 
 app.use(
-  cors()
-);
+  cors());
 
 app.use(express.json());
 
